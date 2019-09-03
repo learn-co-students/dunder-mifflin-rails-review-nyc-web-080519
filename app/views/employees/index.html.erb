@@ -1,0 +1,11 @@
+<h1>Employee Index Page</h1>
+
+<%= link_to 'Create An Employee', new_employee_url %>
+
+<ul>
+    <% @employees.each do |employee| %>
+        <li>
+            <%= link_to employee.first_name, employee_url(employee) %>
+        </li>
+    <% end %>
+</ul>

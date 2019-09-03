@@ -1,0 +1,11 @@
+<h1>Dog Index Page</h1>
+
+<ul>
+    <% @dogs.each do |dog| %>
+        <li>
+            <%= link_to dog.name, dog_url(dog) %> || <%= dog.owners.length  %>
+        </li>
+    <% end %>
+</ul>
+
+<%= link_to 'Sort', sort_dogs_url %>

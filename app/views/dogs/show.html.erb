@@ -1,0 +1,17 @@
+<h1>Dog Show Page</h1>
+
+<h2> Dog Information</h2>
+Name: <%= @dog.name %>
+<br>
+Breed: <%= @dog.breed %>
+<br>
+Age: <%= @dog.age %>
+
+<h2>Dog Owners</h2>
+<ul>
+    <% @dog.owners.each do |owner| %>
+    <li>
+        <%= link_to "#{owner.first_name + " " + owner.last_name}", employee_url(owner) %>
+    </li>
+    <% end %>
+</ul>
