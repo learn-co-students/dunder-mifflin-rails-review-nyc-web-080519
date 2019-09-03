@@ -1,0 +1,4 @@
+<h1>Dog List</h1>
+<% @dogs.each do |dog| %>
+    <%= link_to dog.name, "/dogs/#{dog.id}" %> | <%= dog.employees.count %><br>
+<% end %>
