@@ -1,0 +1,16 @@
+<center>
+  
+  <img src= "<%= @dog.img_url %>">
+
+  <h1><%= @dog.name %></h1>
+
+  Breed: <%= @dog.breed %><br>
+  Age: <%=@dog.age %><br>
+  Employees: <% @dog.employees.each do |employee| %>
+      <%= link_to employee.first_name,employee_path(employee) %>
+  <% end %>
+
+
+
+</center>
+

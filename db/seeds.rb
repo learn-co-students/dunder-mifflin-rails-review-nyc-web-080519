@@ -1,9 +1,16 @@
 Employee.destroy_all
 Dog.destroy_all
 
-5.times do
-  Dog.create(name: Faker::Dog.name, breed: Faker::Dog.breed, age: Faker::Dog.age)
-end
+# 5.times do
+#   Dog.create(name: Faker::Dog.name, breed: Faker::Dog.breed, age: Faker::Dog.age)
+# end
+
+Dog.create(name: "Corgi Jr.", breed: "Corgi", age: Faker::Dog.age, img_url: "https://www.rover.com/blog/wp-content/uploads/2019/01/6342530545_45ec8696c8_b-960x540.jpg")
+Dog.create(name: "Ellie", breed: "Golden Retriever", age: Faker::Dog.age, img_url: "https://bit.ly/2k1fIPy")
+Dog.create(name: "Cuddles", breed: "American Eskimo", age: Faker::Dog.age, img_url: "https://bit.ly/2lY2dkh")
+Dog.create(name: "Scruffy", breed: "Minature Schnauzer", age: Faker::Dog.age, img_url: "https://bit.ly/2jThTEC ")
+Dog.create(name: "Ted", breed: "Pitbull", age: Faker::Dog.age, img_url: "https://bit.ly/2krtHOO")
+
 
 Employee.create(first_name: "Jim", last_name: "Halpert", alias: "Big Tuna", title: "Regional Co-Manager", office: "Scranton", dog: Dog.second, img_url: "https://s-i.huffpost.com/gen/2028878/images/n-UPROXX-628x314.jpg")
 Employee.create(first_name: "Michael", last_name: "Scott", alias: "Prison Mike", title: "Regional Manager", office: "Scranton", dog: Dog.first, img_url: "https://i2.wp.com/mtncatholic.com/wp-content/uploads/2016/10/6357600113572837231773916132_michael-scott-s-top-tantrums.png?fit=500%2C359")
