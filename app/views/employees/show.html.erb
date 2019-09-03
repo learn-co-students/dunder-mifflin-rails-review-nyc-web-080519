@@ -1,0 +1,14 @@
+<h1>SHOW page for <%=@employee.full_name %>!</h1>
+
+
+
+<h3>Name: <%=@employee.full_name%></h3>
+<h3>Alias: <%=@employee.alias%></h3>
+<h3>Title: <%=@employee.title%></h3>
+<h3>Office: <%=@employee.office%></h3>
+<h3>Dog: <%=link_to @employee.dog.name, dog_path(@employee.dog.id)%></h3>
+<img src="<%=@employee.img_url%>" >
+
+<%= button_to "Edit this employee", edit_employee_path(@employee.id), method: :get %>
+
+<%= link_to "Show all employees", employees_path %>
