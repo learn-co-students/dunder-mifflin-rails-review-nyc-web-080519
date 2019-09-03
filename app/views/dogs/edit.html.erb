@@ -1,0 +1,15 @@
+<h1>Edit Dog</h1>
+
+<% if flash[:messages] %>
+    <h2><%= flash[:messages] %></h2>
+<% end %>
+
+<%= form_for @dog do |f| %>
+    Name:
+    <%= f.text_field :name %><br><br>
+    Breed:
+    <%= f.text_field :breed %><br><br>
+    Age:
+    <%= f.text_field :age %><br><br>
+    <%= f.submit :'Edit Dog' %>
+<% end %>
