@@ -1,0 +1,9 @@
+<font color="blue"><h1><%= @dog.name %></h1></font>
+<h3><font color="red"> Breed: </font><%= @dog.breed %></h3>
+<h4><font color="red"> Age: </font><%= @dog.age %></h4>
+
+<ul>
+    <% @owners.each do |owner| %>
+        <li><%= owner.first_name + " " + owner.last_name %></li>
+    <% end %>
+</ul>
