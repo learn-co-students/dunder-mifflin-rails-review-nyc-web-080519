@@ -1,0 +1,16 @@
+<h1>Create New Employee</h1>
+
+<%if flash[:messages]%>
+<h3><%=flash[:messages]%></h3>
+<%end%>
+
+<%=form_for @employee do |f|%>
+    <p><%=f.text_field :first_name, placeholder: 'First Name'%></p>
+    <p><%=f.text_field :last_name, placeholder: 'Last Name'%></p>
+    <p><%=f.text_field :alias, placeholder: 'Alias Name'%></p>
+    <p><%=f.text_field :title, placeholder: 'Title Name'%></p>
+    <p><%=f.text_field :office, placeholder: 'Office Name'%></p>
+    <p><%=f.text_field :img_url, placeholder: 'Image Url'%></p>
+    <p><%=f.collection_select :dog_id, @dogs, :id, :name, prompt: true%></p>
+    <p><%=f.submit :submit%></p>
+<%end%>
