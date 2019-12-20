@@ -1,0 +1,16 @@
+<h1>Edit Employee</h1>
+
+<%if flash[:messages]%>
+<h3><%=flash[:messages]%></h3>
+<%end%>
+
+<%=form_for @employee do |f|%>
+    <p><%=f.text_field :first_name%></p>
+    <p><%=f.text_field :last_name%></p>
+    <p><%=f.text_field :alias%></p>
+    <p><%=f.text_field :title%></p>
+    <p><%=f.text_field :office%></p>
+    <p><%=f.text_field :img_url%></p>
+    <p><%=f.collection_select :dog_id, @dogs, :id, :name, prompt: true%></p>
+    <p><%=f.submit :submit%></p>
+<%end%>
