@@ -1,0 +1,27 @@
+<h1>Make New Employee</h1>
+
+<% if flash[:messages] %>
+<h2><%= flash[:messages] %></h2>
+<% end %>
+
+<p>--------------------------------------</p>
+<p><%= form_for @employee do |f| %></p>
+<p><b>First Name</b></p>
+<p><%= f.text_field :first_name %></p>
+<p><b>Last Name</b></p>
+<p><%= f.text_field :last_name %></p>
+<p><b>Image</b></p>
+<p><%= f.text_area :img_url %></p>
+<p><b>Nickname</b></p>
+<p><%= f.text_field :alias %></p>
+<p><b>Position</b></p>
+<p><%= f.text_field :title %></p>
+<p><b>Office</b></p>
+<p><%= f.text_field :office %></p>
+<p><b>Dog</b></p>
+<p><%= f.collection_select :dog_id, @dogs, :id, :name %>
+<%= f.submit :submit %>
+<% end %>
+<p>--------------------------------------</p>
+</br>
+<%= link_to "All Employees", employees_path %>

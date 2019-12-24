@@ -1,0 +1,19 @@
+<h1>Make New Dog</h1>
+
+<% if flash[:messages] %>
+<h2><%= flash[:messages] %></h2>
+<% end %>
+
+<p>--------------------------------------</p>
+<p><%= form_for @dog do |f| %></p>
+<p><b>Name</b></p>
+<p><%= f.text_field :name %></p>
+<p><b>Breed</b></p>
+<p><%= f.text_field :breed %></p>
+<p><b>Age</b></p>
+<p><%= f.text_field :age %></p>
+<p><%= f.submit :submit %></p>
+<% end %>
+<p>---------------------------------</p>
+</br>
+<%= link_to "All dogs", dogs_path %>

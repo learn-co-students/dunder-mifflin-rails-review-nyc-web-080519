@@ -1,0 +1,22 @@
+<h1><%="#{@dog.name}'s Page"%></h1>
+
+<p>---------------------------------</p>
+<p><b>First Name</b></p>
+<p><%= @dog.name %></p>
+<p><b>Breed</b></p>
+<p><%= @dog.breed %></p>
+<p><b>Age</b></p>
+<p><%= @dog.age %></p>
+<p>---------------------------------</p>
+<h3><b>My Employee(s)</b></h3>
+<% @dog.employees.each do |employee| %>
+    <p><%= link_to employee.first_name + " " + employee.last_name, employee_path(employee) %></p>
+    <img src="<%=employee.img_url%>">
+<% end %>
+<p>---------------------------------</p>
+</br>
+<%= link_to "Edit Dog", edit_dog_path(@dog) %>
+</br>
+<%= link_to "Delete Dog", dog_path(@dog), method: :delete %>
+</br>
+<%= link_to "All Employees", employees_path %>
