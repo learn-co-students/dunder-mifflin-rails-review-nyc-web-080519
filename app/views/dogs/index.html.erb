@@ -1,0 +1,8 @@
+<h1>DOGS Index Page</h1>
+
+<% @dogs.each do |dog| %>
+  <p><%= link_to dog.name, dog_path(dog.id) %>       (owns <%= Dog.find(dog.id).employees.length%> employees)</p>
+<%end%>
+<%= button_to "Sort by count of owned employees", dogs_path, method: :get, params: { sorted: "true" } %>
+</br>
+<%= link_to "Show all employees", employees_path %>
