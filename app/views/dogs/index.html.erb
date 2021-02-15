@@ -1,0 +1,18 @@
+<h1>Welcome to the Dogs Page!</h1>
+
+<ul>
+<% @dogs.each do |dog| %>
+    <li><%= link_to dog.name, dog_path(dog) %></li>
+<% end %>
+</ul>
+
+<br>
+
+<%= form_tag dogs_path, method: :get do %>
+    <%= submit_tag 'Sort Dogs by Number of Employees', name: :my_sort %>
+<% end %>
+
+<br>
+
+<p><%= link_to "Create New Dog", new_dog_path %></p>
+<p><%= link_to "See All Employees", employees_path %></p>
