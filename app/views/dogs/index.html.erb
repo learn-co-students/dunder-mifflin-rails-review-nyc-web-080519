@@ -1,0 +1,5 @@
+<h1>Dog List</h1>
+<% @dogs.each do |dog| %>
+    <%= link_to dog.name, "/dogs/#{dog.id}" %><br>
+<% end %>
+<%= link_to "Sort By Name", "/dogs/sort" %>
