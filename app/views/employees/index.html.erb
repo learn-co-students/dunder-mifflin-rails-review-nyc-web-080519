@@ -1,0 +1,10 @@
+<font color="red"><h1>Employees of The Office</h1></font>
+<ul>
+    <% @employees.all.each do |employee|%>
+        <li><%= link_to employee.first_name + " " + employee.last_name, employee_path(employee)%></li>
+            <%= button_to "Edit this Employee", edit_employee_path(employee), method: :get %>
+            <%= button_to "Delete this Employee", employee_path(employee), method: :delete %>
+    <% end %>
+</ul>
+
+<%= button_to "Create an Employee", new_employee_path, method: :get %>

@@ -1,0 +1,8 @@
+<center>
+    <font color="blue"><h1><%= @employee.first_name + " " + @employee.last_name %></h1></font>
+    <font color="green"><h2><%= @employee.title %></h2></font>
+    <font color="green"><h2><%= @employee.office %></h2></font>
+    <img src= "<%= @employee.img_url %>"> 
+</center>
+
+  <%= button_to "See all Employees", employees_path, method: :get %>
